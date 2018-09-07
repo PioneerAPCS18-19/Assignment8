@@ -22,8 +22,13 @@ public class CheckingAccount
      * Create account with starting balance a, interest rate r, owner own
      * Remember to initialize all class variables.
      */
-    
-    // your implementation...
+    public CheckingAccount(double bal, double r, String own)
+    {
+        balance = bal;
+        rate = r;
+        owner = own;
+        acctAge = 0;
+    }
 
 
     
@@ -35,8 +40,13 @@ public class CheckingAccount
      * Create account with owner given, but without an initial deposit.
      * Remember to initialize all class variables (set rate = 0.001).
      */
-    
-    // your implementation...
+    public CheckingAccount(String own)
+    {
+        owner = own;
+        balance = 0;
+        rate = 0.001;
+        acctAge = 0;
+    }
 
 
 
@@ -46,8 +56,10 @@ public class CheckingAccount
      * @param none
      * @return returns the current balance in the account as a double
      */
-
-    // your implementation...
+    public double getBalance()
+    {
+        return balance;
+    }
 
 
     
@@ -98,7 +110,7 @@ public class CheckingAccount
 
     
     /**
-     * processWithdrawl
+     * processWithdrawal
      *
      * @param amount to be withdrawn as double
      * @return none
@@ -161,14 +173,16 @@ public class CheckingAccount
      * printInfo
      *
      * @param none
-     * @return account info (age, owner, rate, balance) is shown.
+     * @return none
+     * 
+     * Prints account info (age, owner, rate, balance).
      */
     public void printInfo()
     {
-        System.out.println("Checking Account (" + getAge() + " months old)");
-        System.out.println("Rate: " + (getRate() * 100) + "%");
-        System.out.println("Owner: " + getOwner());
-        double b = Math.round(getBalance() * 100.0) / 100.0;
+        System.out.println("Checking Account (" + acctAge + " months old)");
+        System.out.println("Rate: " + (rate * 100) + "%");
+        System.out.println("Owner: " + owner);
+        double b = Math.round(balance * 100.0) / 100.0;
         System.out.println("Balance: $" + b + "\n");
     }
 }
