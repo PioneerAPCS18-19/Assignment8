@@ -4,13 +4,13 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class AccountRunner
+public class Runner
 {
     public static void main(String[] args)
     {
         // create checkingAccount object with starting deposit of
         // $1000, 1.2% interest rate, and an account owner.
-
+    
         
         // create checkingAccount object with an account owner (no initial deposit).
 
